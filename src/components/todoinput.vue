@@ -40,7 +40,7 @@ export default {
     input:focus{outline: none; }
     .inputBox{background: #fff; line-height: 50px; height: 50px; border-radius: 5px; margin-bottom: 10px;}
     .inputBox input{border-style: none; font-size: 1rem;}
-    .addContainer{float: right; background: linear-gradient(to right, #6478fb, #8763fb); display:inline-block; width: 3rem; height: 50px;
+    .addContainer{float: right; background: linear-gradient(to right, #6478fb, #8763fb); width: 3rem; height: 50px;
     border-radius: 0 5px 5px 0; border-style: none;}
     .addBtn{color: white;}
 </style>
