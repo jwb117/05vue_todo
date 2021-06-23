@@ -1,7 +1,7 @@
 <template>
   <div class="inputBox shadow">
-      <input type="text" v-model="newTodoItem" placeholder="글자를 입력하세요">
-        <button class="addContainer" v-on:click="addTodo">
+      <input type="text" v-model="newTodoItem" placeholder="글자를 입력하세요" @keyup.enter="addTodo">
+        <button class="addContainer" @click="addTodo">
             <i class="addBtn fas fa-plus"></i>
         </button>
   </div>
@@ -24,8 +24,8 @@ export default {
         addTodo(){
             console.log(this.newTodoItem);
             let value = this.newTodoItem;
-            localStorage.setItem(value, value);
-            // $this.$emit('addTodo', value);
+            // localStorage.setItem(value, value);
+            this.$emit('addTodo', value);
             this.clearInput();
         },
         clearInput(){
