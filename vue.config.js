@@ -3,6 +3,7 @@ module.exports = {
       name: 'Do It!',
       themeColor: '#00D8FF',
       msTileColor: '#ffffff',
+      backgroundColor: "#ffffff",
       workboxOptions: {
         exclude: [/\.map$/, /manifest\.json$/, 'index.html']
       }
