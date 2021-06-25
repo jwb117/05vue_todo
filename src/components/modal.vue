@@ -35,5 +35,5 @@ export default {
     .closeBox{background: red; position: fixed;
     width: 300px; padding: 20px 30px; bottom: 0;}
 
-    .black-bg{width: 100%; background: rgba(0,0,0,0.7); height: 100%; position: fixed; top:0; left:0;}
+    .black-bg{width: 100%; background: rgba(0,0,0,0.9); height: 100%; position: fixed; top:0; left:0;}
 </style>

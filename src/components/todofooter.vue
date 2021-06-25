@@ -20,6 +20,8 @@ export default {
   background: #fff;
   border-radius: 5px;
   margin: 0 auto;
+  
+  
 }
 .clearAllBtn{
   color: #e20303;
