@@ -1,12 +1,14 @@
 <template>
-  <div class="modalContainer shadow">
-      <div class="black-bg">
-          <slot name="header"></slot>
+  <div class="black-bg">
+      <div class="modalContainer shadow">
+            <div class="subject"  v-on:click.stop.prevent='modal=false'>
+                <slot name="header"></slot>  
+            </div>        
+            <div class="closeBox"  v-on:click.stop.prevent='modal=false'>              
+                <slot name="footer"></slot>
+            </div>
       </div>
-      <p>
-          <slot name="footer"></slot>
-      </p>
-
+          
   </div>
 </template>
 
@@ -17,12 +19,22 @@ export default {
 </script>
 
 <style>
-    .modalContainer{background: red; 
+    .modalContainer{    
     position: fixed; 
-    width: 300px;
-    padding: 20px 30px;
+    width: 360px;
     color:#fff;
     left:50%; top:50%;
     transform: translate(-50%, -50%); 
+    display: flex; align-items:center; justify-content: center; 
+    height: 128px;
     }
+    .subject{background: blue; 
+    position: fixed; 
+    width: 300px;
+    padding: 20px 30px; top: 0;}
+
+    .closeBox{background: red; position: fixed;
+    width: 300px; padding: 20px 30px; bottom: 0;}
+
+    .black-bg{width: 100%; background: rgba(0,0,0,0.7); height: 100%; position: fixed; top:0; left:0;}
 </style>

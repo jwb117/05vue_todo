@@ -6,11 +6,11 @@
         </button>
   </div>
 
-  <modal v-if="modal" @click="modal=false">
+  <modal v-if="modal"   v-on:click="modal=false">
       <template v-slot:header>경고</template>
-      <template v-slot:footer @click="modal=false">
+      <template v-slot:footer>
           할 일을 입력하세요!
-          <i class="closeModalBtn fa fa-times" ></i>
+            &nbsp;&nbsp;<i class="closeModalBtn fa fa-times" @click="modal=false"></i>
           </template>
   </modal>
   
@@ -36,10 +36,10 @@ export default {
         addTodo(){
             console.log(this.newTodoItem);
             if(this.newTodoItem !== ''){
-            let value = this.newTodoItem && this.newTodoItem.trim();
-            // localStorage.setItem(value, value);
-            this.$emit('addTodo', value);
-            this.clearInput();
+                let value = this.newTodoItem && this.newTodoItem.trim();
+                // localStorage.setItem(value, value);
+                this.$emit('addTodo', value);
+                this.clearInput();
             }else{
                 this.modal = true;
             }
