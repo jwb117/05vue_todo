@@ -1,10 +1,10 @@
 <template>
   <div class="black-bg">
-      <div class="modalContainer shadow">
-            <div class="subject"  v-on:click.stop.prevent='modal=false'>
+      <div class="modalContainer shadow"   v-on:click.stop.prevent='modal=false'>
+            <div class="subject">
                 <slot name="header"></slot>  
             </div>        
-            <div class="closeBox"  v-on:click.stop.prevent='modal=false'>              
+            <div class="closeBox">              
                 <slot name="footer"></slot>
             </div>
       </div>
@@ -25,7 +25,6 @@ export default {
     color:#fff;
     left:50%; top:50%;
     transform: translate(-50%, -50%); 
-    display: flex; align-items:center; justify-content: center; 
     height: 128px;
     }
     .subject{background: blue; 
