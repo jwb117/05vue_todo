@@ -3,7 +3,10 @@ module.exports = {
       name: 'Do It!',
       themeColor: '#00D8FF',
       msTileColor: '#ffffff',
-      backgroundColor: "#ffffff",
+      manifestOptions: {
+        background_color: "#ffffff"
+      }
+      startUrl:"."
       workboxOptions: {
         exclude: [/\.map$/, /manifest\.json$/, 'index.html']
       }
