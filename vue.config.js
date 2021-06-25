@@ -5,8 +5,8 @@ module.exports = {
       msTileColor: '#ffffff',
       manifestOptions: {
         background_color: "#ffffff"
-      }
-      startUrl:"."
+      },
+      startUrl:".",
       workboxOptions: {
         exclude: [/\.map$/, /manifest\.json$/, 'index.html']
       }
